@@ -1,53 +1,38 @@
-## 📡 RouteLLM Chat App 
+📡 RouteLLM Chat App
 
-> Note: This project is inspired by the opensource [RouteLLM library](https://github.com/lm-sys/RouteLLM/tree/main), which provides intelligent routing between different language models.
+Inspired by the open-source RouteLLM library
+, this app shows how queries can be routed intelligently between different language models for optimal performance and efficiency.
 
-This Streamlit application demonstrates the use of RouteLLM, a system that intelligently routes queries between different language models based on the complexity of the task. It provides a chat interface where users can interact with AI models, and the app automatically selects the most appropriate model for each query.
+🚀 What is it?
 
-### Features
-- Chat interface for interacting with AI models
-- Automatic model selection using RouteLLM
-- Utilizes both GPT-4 and Meta-Llama 3.1 models
-- Displays chat history with model information
+A Streamlit-based chat application that automatically decides which AI model should handle your query. Instead of relying on a single model, it leverages multiple LLMs and dynamically routes tasks to the most suitable one—balancing speed, cost, and quality.
 
-### How to get Started?
+✨ Key Features
 
-1. Clone the GitHub repository
+💬 Interactive Chat UI – Simple interface for AI conversations
 
-```bash
-git clone https://github.com/Shubhamsaboo/awesome-llm-apps.git
-cd awesome-llm-apps/advanced_tools_frameworks/llm_router_app
-```
-2. Install the required dependencies:
+🤖 Smart Model Routing – Queries are sent to the best model depending on complexity
 
-```bash
-pip install -r requirements.txt
-```
-3. Set up your API keys:
+🔀 Hybrid Model Setup – Combines GPT-4 (mini) for complex reasoning with Meta-Llama 3.1 (70B Turbo) for lightweight tasks
 
-```bash
-os.environ["OPENAI_API_KEY"] = "your_openai_api_key"
-os.environ['TOGETHERAI_API_KEY'] = "your_togetherai_api_key"
-```
-Note: In a production environment, it's recommended to use environment variables or a secure configuration management system instead of hardcoding API keys.
+📜 Response Transparency – Each answer includes details about which model was used
 
-4. Run the Streamlit App
-```bash
-streamlit run llm_router.py
-```
+🗂️ Chat History Tracking – Keeps a full record of messages along with model selections
 
-### How it Works?
+⚙️ How It Works
 
-1. RouteLLM Initialization: The app initializes the RouteLLM controller with two models:
-    - Strong model: GPT-4 (mini)
-    -  Weak model: Meta-Llama 3.1 70B Instruct Turbo
+Initialization – RouteLLM is configured with two models:
 
-2. Chat Interface: Users can input messages through a chat interface.
+🏋️ Strong model → GPT-4 (mini)
 
-3. Model Selection: RouteLLM automatically selects the appropriate model based on the complexity of the user's query.
+🪶 Efficient model → Meta-Llama 3.1 70B Instruct Turbo
 
-4. Response Generation: The selected model generates a response to the user's input.
+User Input – The user types a query in the chat box.
 
-5. Display: The app displays the response along with information about which model was used.
+Routing Logic – RouteLLM evaluates the query’s complexity and selects the optimal model.
 
-6. History: The chat history is maintained and displayed, including model information for each response.
+Response Generation – The chosen model produces a reply.
+
+Display – The response is shown with the model label for full transparency.
+
+History – The conversation log, including model usage, is stored and displayed.
