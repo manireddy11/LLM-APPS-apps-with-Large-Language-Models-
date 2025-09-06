@@ -9,33 +9,7 @@ This script demonstrates how to finetune the Llama 3.2 model using the [Unsloth]
 - Uses the FineTome-100k dataset for training
 - Configurable for different model sizes (1B and 3B)
 
-### Installation
 
-1. Clone the repository:
-
-```bash
-git clone https://github.com/Shubhamsaboo/awesome-llm-apps.git
-cd awesome-llm-apps/llm_finetuning_tutorials/llama3.2_finetuning
-```
-
-2. Install the required dependencies:
-
-```bash
-pip install -r requirements.txt
-```
-
-## Usage
-
-1. Open the script in Google Colab or your preferred Python environment.
-
-2. Run the script to start the finetuning process:
-
-```bash
-# Run the entire script
-python finetune_llama3.2.py
-```
-
-3. The finetuned model will be saved in the "finetuned_model" directory.
 
 ## How it Works
 
